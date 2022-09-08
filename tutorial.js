@@ -7,6 +7,7 @@ bCount = 0;
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
+    noCursor();
 }
 
 function draw(){
@@ -14,9 +15,10 @@ function draw(){
     fill(255, 255, 255);
     textSize(32);
     text('Bounces = '+ bCount,  50, 50);
+    
 
     fill(255, 0, 0);                                                        //color circle
-    circle(circleX, circleY, circleR);                                      //make circle
+    circle(circleX, circleY, circleR*2);                                      //make circle
 
     circleX = circleX + speedX;                                             //keep moving x direction
     circleY = circleY + speedY;                                             //keep moving y direction
@@ -30,4 +32,7 @@ function draw(){
         speedX = speedX * -1;
         bCount++;
     } 
+
+    fill(235, 0, 120);
+    circle(mouseX, mouseY, 10);
 }
