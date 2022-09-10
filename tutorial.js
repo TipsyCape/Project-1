@@ -8,6 +8,10 @@ color2 = 0;
 color3 = 0;
 bCount = 0;
 
+function decTohex(dec){
+    return Math.abs(dec).toString(16);
+}
+
 function setup(){
     createCanvas(windowWidth, windowHeight);
 //    noCursor();     gets rid of cursor
@@ -19,6 +23,7 @@ function draw(){
     textSize(32);
     text('Bounces = '+ bCount,  50, 50);
     text('Color = ' + color1 + 'R, ' + color2 + 'G, ' + color3 + 'B',  50, 100);
+    text('hex = #' + decTohex(color1) + decTohex(color2) + decTohex(color3), 50, 150);
     
 
     fill(color1, color2, color3);                                                        //color circle
@@ -43,6 +48,16 @@ function draw(){
         color3 = floor(random(1,255));
     } 
 
+
+
 //    fill(235, 0, 120);
 //    circle(mouseX, mouseY, 10);    screwing around with custom cursors...
+}
+
+function mousePressed(){
+    noLoop();
+}
+
+function mouseReleased(){
+    loop();
 }
