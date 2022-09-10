@@ -24,7 +24,7 @@ function draw(){
     text('Bounces = '+ bCount,  50, 50);
     text('Color = ' + color1 + 'R, ' + color2 + 'G, ' + color3 + 'B',  50, 100);
     text('hex = #' + decTohex(color1) + decTohex(color2) + decTohex(color3), 50, 150);
-    text('Mouse X = ' + floor(mouseX) + '\n' + 'Mouse Y = ' + floor(mouseY), windowWidth - 300, 50);
+//    text('Mouse X = ' + floor(mouseX) + '\n' + 'Mouse Y = ' + floor(mouseY), windowWidth - 300, 50);
     
 
     fill(color1, color2, color3);                                                        //color circle
