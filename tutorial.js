@@ -8,6 +8,19 @@ color2 = 0;
 color3 = 0;
 bCount = 0;
 
+//pauses the screen on mouse click
+let paused = true;
+function mousePressed(){
+    paused = !paused;
+    if(paused == true){
+        noLoop();
+    } else {
+        loop();
+    }
+
+}
+
+//convert the RGB color format into hexidecimal
 function decTohex(dec){
     return Math.abs(dec).toString(16);
 }
@@ -23,7 +36,7 @@ function draw(){
     textSize(32);
     text('Bounces = '+ bCount,  50, 50);
     text('Color = ' + color1 + 'R, ' + color2 + 'G, ' + color3 + 'B',  50, 100);
-    text('hex = #' + decTohex(color1) + decTohex(color2) + decTohex(color3), 50, 150);
+    text('Hex = #' + decTohex(color1) + decTohex(color2) + decTohex(color3), 50, 150);
 //    text('Mouse X = ' + floor(mouseX) + '\n' + 'Mouse Y = ' + floor(mouseY), windowWidth - 300, 50);
     
 
@@ -53,16 +66,4 @@ function draw(){
 
 //    fill(235, 0, 120);
 //    circle(mouseX, mouseY, 10);    screwing around with custom cursors...
-}
-
-//pauses the screen on mouse click
-let paused = true;
-function mousePressed(){
-    paused = !paused;
-    if(paused == true){
-        noLoop();
-    } else {
-        loop();
-    }
-
 }
