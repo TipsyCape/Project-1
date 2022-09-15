@@ -1,6 +1,6 @@
 let colorR = 255, colorG = 255, colorB = 255;
 class Block{
-    constructor(x, y, width, height, speedX, speedY, colorR, colorG, colorB){
+    constructor(x, y, width, height, speedX, speedY){
         this.x = x;
         this.y = y;
         this.width = width;
@@ -47,15 +47,13 @@ function mousePressed(){
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
+    background(0);
 }
 
 
 function draw(){
-    resizeCanvas(windowWidth, windowHeight);
-    background(0);
     for(i=0; i < numBlocks; i++){
         blocks[i].show();
         blocks[i].move();
     }
-    
 }
