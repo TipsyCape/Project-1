@@ -18,6 +18,7 @@ function draw(){
         if(mouseIsPressed){
             blocks[i].attract();
         }
+
     }
 
 }
