@@ -1,4 +1,4 @@
-let numBlocks = 10;
+let numBlocks = 100;
 let blocks = [];
 for (let i=0; i < numBlocks; i++){
     blocks[i] = new Block(0, 0, 10, 10, 0, 0);
@@ -17,13 +17,21 @@ function mousePressed(){
     }
 }
 
+function mouseReleased(){
+    for (let i=0; i < numBlocks; i++){
+        if(Math.abs(Math.sqrt(  pow(blocks[i].x - mouseX, 2) + pow(blocks[i].y - mouseY, 2)  )) < 100){
+            blocks[i].speedX = random(-10,10);
+            blocks[i].speedY = random(-10,10);
+        }
+    }
+}
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    background(0);
 }
 
 
 function draw(){
+    background(0);
     for(i=0; i < numBlocks; i++){
         blocks[i].show();
         blocks[i].move();

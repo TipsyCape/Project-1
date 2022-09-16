@@ -43,6 +43,13 @@ class Block{
     attract(){
         //attract towards mouse
         if(Math.abs(Math.sqrt(  pow(this.x - mouseX, 2) + pow(this.y - mouseY, 2)  )) < 100){
+            this.speedX = 10;
+            this.speedY = 10;
+            if(this.speedX > this.speedY){
+                this.speedY = this.speedX;
+            } else if (this.speedY > this.speedX){
+                this.speedX = this.speedY;
+            }
             if(this.x > mouseX && this.speedX > 0){
                 this.speedX = this.speedX * -1;
             }
