@@ -22,9 +22,9 @@ class Block{
             } else if(this.speedX < 0){
                 this.speedX = this.speedX + decel;
             }
-            colorR = floor(random(1,255));
-            colorG = floor(random(1,255));
-            colorB = floor(random(1,255));
+            // colorR = floor(random(1,255));
+            // colorG = floor(random(1,255));
+            // colorB = floor(random(1,255));
         }
         this.y = this.y + this.speedY;
         if(this.y > (windowHeight - this.height) || this.y <= 0){
@@ -34,9 +34,9 @@ class Block{
             } else if(this.speedX < 0){
                 this.speedY = this.speedY + decel;
             }
-            colorR = floor(random(1,255));
-            colorG = floor(random(1,255));
-            colorB = floor(random(1,255));
+            // colorR = floor(random(1,255));
+            // colorG = floor(random(1,255));
+            // colorB = floor(random(1,255));
         }
         
     }
