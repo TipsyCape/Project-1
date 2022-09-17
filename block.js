@@ -1,21 +1,27 @@
-let colorR = 255, colorG = 255, colorB = 255;
 let decel = 0.5;
 class Block{
-    constructor(x, y, width, height, speedX, speedY){
+    constructor(x, y, width, height, speedX, speedY, R, G, B){
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.speedX = speedX;
         this.speedY = speedY;
+        this.R = R;
+        this.G = G;
+        this.B = B;
     }
     show(){
-        fill(colorR, colorG, colorB);
+        noStroke();
+        fill(this.R, this.G, this.B);
         rect(this.x,this.y,this.width,this.height);
     }
     move(){
         this.x = this.x + this.speedX;
         if(this.x > (windowWidth - this.width) || this.x <= 0){
+            this.R = floor(random(0,255));
+            this.G = floor(random(0,255));
+            this.B = floor(random(0,255)); 
             this.speedX = this.speedX * - 1;
             if(this.speedX > 0){
                 this.speedX = this.speedX - decel;
@@ -28,6 +34,9 @@ class Block{
         }
         this.y = this.y + this.speedY;
         if(this.y > (windowHeight - this.height) || this.y <= 0){
+            this.R = floor(random(0,255));
+            this.G = floor(random(0,255));
+            this.B = floor(random(0,255));            
             this.speedY = this.speedY * - 1;
             if(this.speedY > 0){
                 this.speedY = this.speedY - decel;
