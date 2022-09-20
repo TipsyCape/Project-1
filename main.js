@@ -1,4 +1,4 @@
-let numBlocks = 100;
+let numBlocks = 20;
 let blocks = [];
 for (let i=0; i < numBlocks; i++){
     blocks[i] = new Block(0, 0, 10, 10, 0, 0, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));

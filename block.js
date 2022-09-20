@@ -45,7 +45,7 @@ class Block{
     }
     attract(){
         //attract towards mouse
-        if(Math.abs(Math.sqrt(  pow(this.x - mouseX, 2) + pow(this.y - mouseY, 2)  )) < 100){
+        if(Math.abs(Math.sqrt(  pow(this.x - mouseX, 2) + pow(this.y - mouseY, 2)  )) < 500){
             if(Math.abs(this.speedX) < 10){
             this.speedX = this.speedX + Math.abs(pmouseX - mouseX) / 60;
             }
