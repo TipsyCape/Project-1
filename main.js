@@ -1,7 +1,7 @@
 let numBlocks = 100;
 let blocks = [];
 for (let i=0; i < numBlocks; i++){
-    blocks[i] = new Block(0, 0, 10, 10, 0, 0, 0, 0, 0);
+    blocks[i] = new Block(0, 0, 10, 10, 0, 0, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255));
 }
 function setup(){
     createCanvas(windowWidth, windowHeight);
