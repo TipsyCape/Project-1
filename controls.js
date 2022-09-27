@@ -21,3 +21,19 @@ function mouseReleased(){
         }
     }
 }
+
+function keyPressed(){
+    if(keyCode == UP_ARROW){
+        for (let i=0; i < numBlocks; i++){
+            blocks[i].width += 5;
+            blocks[i].height += 5;
+        }
+    }
+    if(keyCode == DOWN_ARROW){
+        for (let i=0; i < numBlocks; i++){
+            blocks[i].width -= 5;
+            blocks[i].height -= 5;
+        }
+    }
+
+}
